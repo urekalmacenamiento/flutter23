@@ -1,0 +1,184 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp (MaterialApp(
+  home: Scaffold( appBar: AppBar(
+    title: Text('Hello'),
+    centerTitle: true,
+    backgroundColor: Colors.red,
+   ),
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+//properties
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Hello'),
+            Icon(
+              Icons.airport_shuttle,
+              color: Colors.black,
+              size: 20.0,),
+            RaisedButton(
+              onPressed: (){
+                print('you are the best');
+              },
+              child: Text('shadow'),
+              color: Colors.cyan,
+            ),
+
+            RaisedButton.icon(
+              onPressed: (){
+                print('you are the best');
+              },
+              icon: Icon(
+                  Icons.mail
+              ),
+              label: Text('Mail me'),
+              color: Colors.redAccent,
+            ),
+            FlatButton(
+              onPressed: (){ print('eres el mejor');},
+              child: Text('Echale'),
+              color: Colors.cyan,
+            ),
+            IconButton(
+                onPressed: (){
+                  print('Haaa');
+                },
+                icon: Icon(Icons.alternate_email),
+                color: Colors.amber
+            ),
+            Expanded(
+              flex: 1,
+              child: Image(
+              image: NetworkImage('https://img1.freepng.es/20180412/rxq/kisspng-ipma-email-telephone-message-email-icon-5acf36453ee1e1.3103384815235292852576.jpg'),),
+            ),
+              Container(
+              padding: EdgeInsets.all(20.0),
+//padding: EdgeInsets.fromLTRB(10.0,15.0,10.0,15.0),
+//padding: EdgeInsets.symmetric(20.0),
+              margin: EdgeInsets.all(20.0),
+              color: Colors.amberAccent,
+
+              child: Text('Hello again',
+                style:TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.0,
+                  color: Colors.orange[600],
+                  fontFamily: 'SendFlowers',
+                ),
+              ),
+
+            ),
+
+            Container(
+              padding: EdgeInsets.all(20.0),
+//padding: EdgeInsets.fromLTRB(10.0,15.0,10.0,15.0),
+//padding: EdgeInsets.symmetric(20.0),
+              margin: EdgeInsets.all(20.0),
+              color: Colors.green,
+
+              child: Text('Hello again2',
+                style:TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.0,
+                  color: Colors.green[600],
+                  fontFamily: 'SendFlowers',
+                ),
+              ),
+
+            ),
+          ],
+        ),
+        Container(
+          padding: EdgeInsets.all(20.0),
+          color: Colors.redAccent,
+          child:Text('one'),
+        ),
+        Container(
+          padding: EdgeInsets.all(20.0),
+          color: Colors.pinkAccent,
+          child:Text('two'),
+        ),
+        Container(
+          padding: EdgeInsets.all(20.0),
+          color: Colors.amber,
+          child:Text('three'),
+        ),
+        Container(
+          padding: EdgeInsets.all(02.0),
+          color: Colors.yellow,
+          child: Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child:Text('1'),
+              ),
+              Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.pinkAccent,
+                child:Text('2'),
+              ),
+              Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.amber,
+                child:Text('3'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.all(02.0),
+          color: Colors.pink,
+          child: Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Image(
+                  image: NetworkImage('https://media.gettyimages.com/photos/beautiful-girl-red-background-picture-id1157172541?k=20&m=1157172541&s=612x612&w=0&h=Bf2puUDRB-2DZvosB5qZssE6IeSJ7if5YYobAYElxCQ='),),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child:Text('1'),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.pinkAccent,
+                  child:Text('2'),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.amber,
+                  child:Text('3'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+
+    floatingActionButton: FloatingActionButton(
+      onPressed: () { },
+      child: Text('click'),
+      backgroundColor: Colors.orange,
+      hoverColor: Colors.redAccent,
+    ),
+    backgroundColor: Colors.white,
+  ),
+
+));
